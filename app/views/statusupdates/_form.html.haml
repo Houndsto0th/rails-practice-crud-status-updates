@@ -1,0 +1,14 @@
+=form_for @statusupdate do |f|
+  =render 'errors'
+  %div
+    =f.label :status
+    =f.text_field :status
+  %div
+    =f.label :user
+    =f.text_field :user
+  -if @statusupdate.id?
+    %div
+      =f.label :likes
+      =f.number_field :likes
+  %div
+    =f.submit

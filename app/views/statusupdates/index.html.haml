@@ -1,0 +1,21 @@
+=link_to "New Status", new_statusupdate_path
+
+%br
+%br
+
+%table
+  %tr
+    %th Status
+    %th User
+    %th Likes
+  - @statusupdates.each do |statusupdate|
+    %tr
+      %td
+        =link_to statusupdate.status, statusupdate
+      %td
+        =statusupdate.user
+      %td
+        =statusupdate.likes
+      %td
+        =link_to "Edit", edit_statusupdate_path(statusupdate)
+      

@@ -1,0 +1,14 @@
+%table
+  %tr
+    %th Status
+    %th User
+    %th Likes
+    %tr
+      %td
+        =@statusupdate.status
+      %td
+        =@statusupdate.user
+      %td
+        =@statusupdate.likes
+      %td
+        =link_to "Edit", edit_statusupdate_path(@statusupdate)
